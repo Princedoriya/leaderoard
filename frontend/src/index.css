@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+  font-family: 'Comfortaa', cursive;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-extrabold text-green-100;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  @apply bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded shadow-lg transition duration-300 ease-in-out transform hover:scale-105;
+  border: none;
+  cursor: pointer;
+  font-family: 'Comfortaa', cursive;
+  font-style: normal;
+}
+
+button:disabled {
+  @apply bg-green-400 cursor-not-allowed;
+}
+
+input, select {
+  @apply bg-green-700 text-white border border-green-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400;
+  font-family: 'Comfortaa', cursive;
+  font-style: normal;
+}
+
+.claimed-points {
+  @apply text-green-200 font-bold mt-2 animate-pulse;
+}
+
+.leaderboard-table {
+  @apply w-full border-collapse;
+}
+
+.leaderboard-table th {
+  @apply px-6 py-4 text-left text-white text-xl font-semibold tracking-wider bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 rounded-t-md;
+}
+
+.leaderboard-table td {
+  @apply px-6 py-4 text-white text-lg text-center bg-white/10 backdrop-blur-sm rounded-lg shadow-md;
+}
+
+.leaderboard-row {
+  @apply transition transform hover:scale-[1.02] hover:bg-white/20;
+}
+
+.leaderboard-row td:first-child {
+  @apply font-bold text-yellow-400 text-lg;
+}
+
+.leaderboard-row td:nth-child(2)::before {
+  content: '';
+  @apply inline-block w-10 h-10 rounded-full mr-3 bg-cover bg-center;
+  /* Set profile pictures using inline style or dynamic classes in component */
+}
+
+.flex-col > * + * {
+  @apply mt-4;
+}
+
+/* Utility classes for Comfortaa font weights */
+.comfortaa-400 {
+  font-family: "Comfortaa", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comfortaa-700 {
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
